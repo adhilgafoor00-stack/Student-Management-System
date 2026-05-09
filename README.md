@@ -24,7 +24,7 @@ A modern, dark‑themed desktop application for managing student records. It is 
 ## Installation
 1. **Clone or copy the project** into a directory of your choice.
    ```bash
-   git clone <repository‑url> "python mini project"
+   git clone <https://github.com/adhilgafoor00-stack/Student-Management-System.git> "python mini project"
    cd "python mini project"
    ```
 2. **Install Tkinter** for your distribution:
