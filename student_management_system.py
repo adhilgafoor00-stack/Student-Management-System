@@ -194,19 +194,19 @@ class BasePage(ttk.Frame):
     
     def setup_style(self):
         """Setup common styling."""
-        dark_bg = "#2b2b2b"
-        dark_fg = "#e0e0e0"
-        accent = "#3d85c6"
+        dark_bg = "#ffffff"
+        dark_fg = "#000000"
+        accent = "#0066cc"
         self.configure(style="Dark.TFrame")
         
         style = ttk.Style(self)
         style.configure("Dark.TFrame", background=dark_bg)
         style.configure("Dark.TLabel", background=dark_bg, foreground=dark_fg, font=("Roboto", 10))
-        style.configure("Dark.TEntry", fieldbackground="#3c3f41", foreground=dark_fg, font=("Roboto", 10))
-        style.configure("Dark.TCombobox", fieldbackground="#3c3f41", foreground=dark_fg, font=("Roboto", 10))
-        style.configure("Dark.TButton", background=accent, foreground=dark_fg, font=("Roboto", 10), padding=5)
-        style.map("Dark.TButton", background=[("active", "#5599dd")])
-        style.configure("Dark.Treeview", background="#3c3f41", fieldbackground="#3c3f41", foreground=dark_fg, font=("Roboto", 10))
+        style.configure("Dark.TEntry", fieldbackground="#f9f9f9", foreground=dark_fg, font=("Roboto", 10))
+        style.configure("Dark.TCombobox", fieldbackground="#f9f9f9", foreground=dark_fg, font=("Roboto", 10))
+        style.configure("Dark.TButton", background=accent, foreground="#ffffff", font=("Roboto", 10), padding=5)
+        style.map("Dark.TButton", background=[("active", "#0052a3")])
+        style.configure("Dark.Treeview", background="#f9f9f9", fieldbackground="#f9f9f9", foreground=dark_fg, font=("Roboto", 10))
         style.configure("Dark.Treeview.Heading", background=dark_bg, foreground=dark_fg, font=("Roboto", 11, "bold"))
     
     def on_show(self):
@@ -573,7 +573,7 @@ class ReportsPage(BasePage):
             btn.pack(side="left", padx=10, pady=10)
         
         # Results area
-        self.results_text = tk.Text(self, bg="#3c3f41", fg="#e0e0e0", font=("Roboto", 10), 
+        self.results_text = tk.Text(self, bg="#f9f9f9", fg="#000000", font=("Roboto", 10), 
                                    wrap=tk.WORD, state=tk.DISABLED)
         scrollbar = ttk.Scrollbar(self, command=self.results_text.yview)
         self.results_text.configure(yscrollcommand=scrollbar.set)
@@ -681,7 +681,7 @@ class SettingsPage(BasePage):
         dialog = tk.Toplevel(self)
         dialog.title("Change Password")
         dialog.geometry("300x200")
-        dialog.configure(bg="#2b2b2b")
+        dialog.configure(bg="#ffffff")
         
         ttk.Label(dialog, text="New Password:", style="Dark.TLabel").pack(pady=10)
         password_entry = ttk.Entry(dialog, show="*", style="Dark.TEntry")
